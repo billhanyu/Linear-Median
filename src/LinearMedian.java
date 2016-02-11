@@ -63,12 +63,12 @@ public class LinearMedian {
 			for (int i = 0; i < right.size(); i++) {
 				rightArray[i] = right.get(i);
 			}
-			return findMedian(rightArray, k - left.size());
+			return findMedian(rightArray, k - raw.length + right.size());
 		}
 	}
 
 	public static void main(String[] args) {
-		int[] input = new int[] {1, 2, 3, 4, 4, 4, 5};
+		int[] input = new int[] {6, 2, 1, 5, 3, 7, 9, 10, 123, 4, 3};
 		LinearMedian test = new LinearMedian();
 		System.out.println(test.findMedian(input, input.length / 2));
 	}
